@@ -1,0 +1,31 @@
+﻿@model QA.Demo.Models.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@using(Ajax.BeginForm(new AjaxOptions()))
+{
+
+    @Html.LabelFor(m => m.UserName)
+    @Html.TextBoxFor(m => m.UserName)
+
+    <br/>
+
+    @Html.LabelFor(m => m.Password)
+    @Html.TextBoxFor(m => m.Password)
+
+    <br />
+    <input type="submit" value="Submit" />
+}
+
+Or you can login with <br/>
+<div style="margin-left:50px">
+    @Html.ActionLink("Openid", "") <br/>
+    @Html.ActionLink("Google", "") <br/>
+    @Html.ActionLink("Facebook", "") <br/>
+</div>
+
+
